@@ -1,5 +1,6 @@
 package View;
 import Model.Cliente;
+import Model.Pessoa;
 import Model.Servico;
 import Model.Usuario;
 
@@ -14,13 +15,12 @@ public class Main {
         System.out.println(nome);
        
         Servico servico = new Servico(1, "Barba", 30);
-        Cliente cliente = new Cliente(1, "Paulo", 'M', "000000000", "R. 10");
-        Usuario user = new Usuario(0, "Paul", "P123");
+        Cliente cliente = new Cliente(1, "Paulo", "R. teste", "00000000");
+        Usuario user = new Usuario(0, "O cortador", "C123!");
         
-        System.out.println(cliente.toString());
-        System.out.println(user.toString());
-        
-       
+        System.out.println(cliente.getNome());
+        System.out.println(user.getNome());
+               
         //System.out.printf("%s %.2f", servico.getDescricao(), servico.getValor());
     }
 }
