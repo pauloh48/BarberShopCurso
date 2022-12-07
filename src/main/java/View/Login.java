@@ -4,17 +4,23 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PAULO
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -78,7 +84,6 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 720, -1, -1));
 
         background2Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/painel-login.png"))); // NOI18N
-        background2Label.setText("jLabel2");
         getContentPane().add(background2Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, -1));
 
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Logo.jpg"))); // NOI18N
@@ -93,6 +98,8 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //executa quando clica no botão
+        this.controller.fizTarefa();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -140,4 +147,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField textUserField;
     private javax.swing.JLabel userLabel;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
 }
