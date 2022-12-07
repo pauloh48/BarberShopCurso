@@ -6,6 +6,8 @@ package View;
 
 import Controller.LoginController;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -100,6 +102,8 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         //executa quando clica no botão
         this.controller.fizTarefa();
+       // System.out.println(textUserField.getText());
+       // System.out.println(textPasswordField.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -151,4 +155,22 @@ public class Login extends javax.swing.JFrame {
     public void exibeMensagem(String mensagem) {
         JOptionPane.showMessageDialog(null, mensagem);
     }
+
+    public JPasswordField getTextPasswordField() {
+        return textPasswordField;
+    }
+
+    public void setTextPasswordField(JPasswordField textPasswordField) {
+        this.textPasswordField = textPasswordField;
+    }
+
+    public JTextField getTextUserField() {
+        return textUserField;
+    }
+
+    public void setTextUserField(JTextField textUserField) {
+        this.textUserField = textUserField;
+    }
+    
+    
 }
